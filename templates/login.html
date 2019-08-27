@@ -67,9 +67,16 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 
 	</style>
 
-
+<script type="text/javascript">
+	window.history.forward();
+	function noBack()
+	{
+		window.history.forward();
+	}
+</script>
 
 	</head>
+	<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload=""></body>
 	<div class="login">
 			<h1>Login</h1>
 			<form id="login" action="/logins" method="POST">
@@ -79,5 +86,5 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 				<button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
 			</form>
 		</div>
-
+	</body>
 	  </html>
