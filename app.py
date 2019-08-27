@@ -88,7 +88,7 @@ def main():
                                      )
 @app.route('/logout')
 def logout():
-    return redirect(url_for('logins'))
+    return render_template('login.html')
 
 if __name__ == '__main__':
     app.run()
