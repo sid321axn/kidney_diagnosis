@@ -86,6 +86,9 @@ def main():
                                      result=prediction
                                      
                                      )
+@app.route('/logout')
+def logout():
+    return redirect(url_for('logins'))
 
 if __name__ == '__main__':
     app.run()
